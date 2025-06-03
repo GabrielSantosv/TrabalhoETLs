@@ -87,6 +87,8 @@ python run.py
 curl -X POST http://localhost:5000/criarConta \
   -H "Content-Type: application/json" \
   -d '{"nome": "João Silva", "email": "joao@email.com", "senha": "123456"}'
+
+  Invoke-WebRequest -Method POST -Uri http://localhost:5000/criarConta -Headers @{"Content-Type" = "application/json"} -Body ([System.Text.Encoding]::UTF8.GetBytes('{"nome": "Nome do Usuário", "email": "email.unico@example.com", "senha": "suaSenha"}'))
 ```
 
 ### Login
@@ -94,6 +96,8 @@ curl -X POST http://localhost:5000/criarConta \
 curl -X POST http://localhost:5000/login \
   -H "Content-Type: application/json" \
   -d '{"email": "joao@email.com", "senha": "123456"}'
+  
+  Invoke-WebRequest -Method POST -Uri http://localhost:5000/login -Headers @{"Content-Type" = "application/json"} -Body ([System.Text.Encoding]::UTF8.GetBytes('{"email": "email.cadastrado@example.com", "senha": "senhaDoUsuario"}'))
 ```
 
 ### Faturar Pedido
@@ -101,5 +105,7 @@ curl -X POST http://localhost:5000/login \
 curl -X POST http://localhost:5000/faturarPedido \
   -H "Content-Type: application/json" \
   -d '{"usuario_id": 1, "produtos": [{"id": 1, "quantidade": 2}]}'
+
+  Invoke-WebRequest -Method POST -Uri http://localhost:5000/faturarPedido -Headers @{"Content-Type" = "application/json"} -Body ([System.Text.Encoding]::UTF8.GetBytes('{"usuario_id": "COLOQUE_AQUI_O_ID_REAL_DO_USUARIO", "produtos": [{"id": "COLOQUE_AQUI_O_ID_REAL_DO_PRODUTO", "quantidade": 2}]}'))
 ```
 
