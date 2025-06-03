@@ -91,3 +91,4 @@ curl -X POST http://localhost:5000/faturarPedido \
   -H "Content-Type: application/json" \
   -d '{"usuario_id": 1, "produtos": [{"id": 1, "quantidade": 2}]}'
 ```
+
