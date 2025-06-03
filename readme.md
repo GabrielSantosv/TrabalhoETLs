@@ -1,34 +1,45 @@
-# Sistema ETL para E-commerce
+# 🛒 Sistema ETL para E-commerce
 
-Este projeto implementa um sistema de backend para e-commerce com agentes ETL (Extract, Transform, Load) para popular um Data Warehouse.
+Este projeto implementa um sistema backend para e-commerce com agentes ETL que integram um banco de dados transacional com um Data Warehouse, permitindo análises em tempo real.
 
-## Descrição
+## 📦 Funcionalidades
 
-O sistema consiste em:
-- Backend de e-commerce com rotas REST
-- Banco de dados transacional (SQLite)
-- Data Warehouse (SQLite)
-- Agentes ETL para sincronização de dados
+✅ Backend com rotas REST  
+✅ Banco de dados transacional (SQLite)  
+✅ Data Warehouse (SQLite)  
+✅ Agentes ETL automáticos  
+✅ Operações de criar conta, login e faturamento de pedidos
 
-## Requisitos
+---
 
-- Python 3.8+
-- Dependências listadas em `requirements.txt`
+## ⚙️ Como funciona?
 
-## Instalação
+1. **Usuário realiza ações via API** (`/criarConta`, `/login`, `/faturarPedido`)
+2. **Os dados são salvos no banco transacional**
+3. **Agentes ETL entram em ação automaticamente:**
+   - **Extraem** dados do banco transacional
+   - **Transformam** para o formato correto
+   - **Carregam** no Data Warehouse
 
-1. Clone o repositório
-2. Crie um ambiente virtual:
+---
+
+## 🚀 Instalação
+
 ```bash
+# Clone o repositório
+git clone <repo-url>
+cd TrabalhoETLs-main
+
+# Crie um ambiente virtual
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-```
+# Ative o ambiente:
+# Linux/Mac
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
 
-3. Instale as dependências:
-```bash
+# Instale as dependências
 pip install -r requirements.txt
-```
 
 ## Estrutura do Projeto
 
