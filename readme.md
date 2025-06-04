@@ -27,7 +27,7 @@ Este projeto implementa um sistema backend para e-commerce com agentes ETL que i
 
 ```bash
 # Clone o repositório
-git clone <repo-url>
+git clone <https://github.com/GabrielSantosv/TrabalhoETLs>
 cd TrabalhoETLs-main
 
 # Crie um ambiente virtual
