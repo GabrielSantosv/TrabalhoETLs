@@ -5,8 +5,8 @@ Este projeto implementa um sistema backend para e-commerce com agentes ETL que i
 ## 📦 Funcionalidades
 
 ✅ Backend com rotas REST  
-✅ Banco de dados transacional (SQLite)  
-✅ Data Warehouse (SQLite)  
+✅ Banco de dados transacional (MongoDB)  
+✅ Data Warehouse (MongoDB)  
 ✅ Agentes ETL automáticos  
 ✅ Operações de criar conta, login e faturamento de pedidos
 
